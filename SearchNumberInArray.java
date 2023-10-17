@@ -14,12 +14,12 @@ public class SearchNumberInArray {
      * 2. INTEGER k
      */
 
-    public static String findNumber(List<Integer> arr, int k) {
+    public static String findNumber(List<Integer> arr, int findMe) {
 
         int size = arr.size();
 
         for (int i = 0; i < size; i++) {
-            if (arr.get(i) == k)
+            if (arr.get(i) == findMe)
                 return "YES";
         }
         return "NO";
@@ -42,9 +42,9 @@ public class SearchNumberInArray {
         // Reading data using readLine
         String input = reader.readLine();
 
-        int find = Integer.parseInt(input);
+        int findFor = Integer.parseInt(input);
 
-        String result = findNumber(arr, find);
+        String result = findNumber(arr, findFor);
         System.out.println(result);
     }
 }
