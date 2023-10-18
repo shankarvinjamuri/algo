@@ -11,8 +11,9 @@ public class HashJava {
 
     public static void findDuplicates(int[] arr) {
 
-            HashSet<Integer> uniqueSet = new HashSet<>();
-        HashSet<Integer> duplicateSet = new HashSet<>();
+        HashSet<Integer> hset = new HashSet<>();
+        hset.add(10);
+        System.out.println(hset.size());
 
         HashMap<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "100");

@@ -1,5 +1,3 @@
-import java.util.*;
-
 class InsertionSort
 {
     static void swap(int[]X,int ind1,int ind2)

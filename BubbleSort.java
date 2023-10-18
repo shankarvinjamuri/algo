@@ -1,5 +1,3 @@
-import java.util.*;
-
 class BubbleSort
 {
     static void swap(int[]X,int ind1,int ind2)

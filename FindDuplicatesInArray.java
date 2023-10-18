@@ -2,7 +2,7 @@ import java.util.*;
 
 public class FindDuplicatesInArray {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 2, 5, 6, 3};
+        int[] arr = { 1, 2, 3, 4, 2, 5, 6, 3 };
 
         findDuplicates(arr);
     }
@@ -10,10 +10,6 @@ public class FindDuplicatesInArray {
     public static void findDuplicates(int[] arr) {
         HashSet<Integer> uniqueSet = new HashSet<>();
         HashSet<Integer> duplicateSet = new HashSet<>();
-
-        HashMap<Integer,String> map =new HashMap<Integer,String>();    
-        map.put(1,"100");
-        System.out.println(map.get(1));
 
         for (int value : arr) {
             if (!uniqueSet.add(value)) {
