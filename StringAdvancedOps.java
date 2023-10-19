@@ -36,10 +36,7 @@ public class StringAdvancedOps {
     return new StringBuilder(str).reverse().toString();
   }
 
-    public static String reverseStringManually(String str) {
-        char str.toCharArray();
-    return new StringBuilder(str).reverse().toString();
-  }
+    
 
   public static void main(String[] args) {
     System.out.println(isPalindrome("racecar")); // true
