@@ -1,40 +1,33 @@
-class InsertionSort
-{
-    static void swap(int[]X,int ind1,int ind2)
-    {
-        int temp = X[ind1];
-        X[ind1] = X[ind2];
-        X[ind2] = temp;
-    }
-    
-    public static void sort(int []X)
-    {
-        int totalSorted = 1;
-        int n = X.length;
-        while (totalSorted <= (n-1))
-        {
-            //insert the item at index position totalSorted into top half
-            //by successive comparison with items before it
-            int i = totalSorted;
-            while(i > 0 && X[i-1] > X[i])
-            {
-                swap(X, i-1, i);
+//We can create a java program to sort array elements using insertion sort. 
+//Insertion is good for small elements only because it requires more time for sorting large number of elements.
+
+public class InsertionSort {
+    public static void insertionSort(int array[]) {
+        int n = array.length;
+        for (int j = 1; j < n; j++) {
+            int key = array[j];
+            int i = j - 1;
+            while ((i > -1) && (array[i] > key)) {
+                array[i + 1] = array[i];
                 i--;
             }
-            totalSorted++;
+            array[i + 1] = key;
         }
     }
 
-    static void printArray(int []X)
-    {
-        for (int i = 0; i < X.length; ++i)
-            System.out.print(X[i] + " ");
-        System.out.println(" ");
-    }
-    
-    public static void main(String args[]) {
-        int myArr2[] = {1, 9, 321, 234, 12, 21, 5, 3, 1, 12, 11, 22, 33, 1, 4, 5, 3, 21, 2};
-        sort(myArr2);
-        printArray(myArr2); 
+    public static void main(String a[]) {
+        int[] arr1 = { 9, 14, 3, 2, 43, 11, 58, 22 };
+        System.out.println("Before Insertion Sort");
+        for (int i : arr1) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        insertionSort(arr1);// sorting array using insertion sort
+
+        System.out.println("After Insertion Sort");
+        for (int i : arr1) {
+            System.out.print(i + " ");
+        }
     }
 }
