@@ -1,6 +1,6 @@
 public class AnalyzeArrayPattern {
     public static void main(String[] args) {
-        int[] arr = { 10, 9, 8, 7, 6 }; // Change the array as needed
+        int[] arr = { 1, 2, 3, 4, 5 }; // Change the array as needed
 
         String pattern = analyzeArrayPattern(arr);
 
